@@ -1,0 +1,119 @@
+.post {
+  padding: 2.5rem;
+  border-radius: 8px;
+  background: var(--gray-800);
+}
+
+.post + .post {
+  margin-top: 2rem;
+}
+
+.post > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post > header time {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authorInfo strong {
+  display: block;
+  line-height: 1.6;
+  color: var(--gray-100);
+}
+
+.authorInfo span {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--gray-400);
+}
+
+.content {
+  line-height: 1.6;
+  margin-top: 1.5rem;
+  color: var(--gray-300);
+}
+
+.content p {
+  margin-top: 1rem;
+}
+
+.content a {
+  font-weight: bold;
+  color: var(--success-500);
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: var(--success-300);
+}
+
+.commentForm {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gray-600);
+}
+
+.commentForm > strong {
+  line-height: 1.6;
+  color: var(--gray-100);
+}
+
+.commentForm textarea {
+  width: 100%;
+  height: 6rem;
+  line-height: 1.6;
+  border: 0;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  resize: none;
+  color: var(--gray-100);
+  background: var(--gray-900);
+}
+
+.commentForm footer {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.commentForm:focus-within footer {
+  max-height: none;
+  visibility: visible;
+}
+
+.commentForm button[type=submit] {
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 0;
+  color: var(--light);
+  background: var(--success-500);
+  transition: background-color 0.2s;
+}
+
+.commentForm button[type=submit]:not(:disabled):hover {
+  background: var(--success-300);
+}
+
+.commentForm button[type=submit]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.commentList {
+  margin-top: 2rem;
+}
