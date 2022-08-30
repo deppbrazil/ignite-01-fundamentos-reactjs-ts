@@ -1,4 +1,4 @@
-import { Header } from "./components/Header"
+import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
 import { Post, PostProps } from "./components/Post";
 
@@ -16,23 +16,24 @@ const posts: Posts[] = [
     author: {
       avatarUrl: "https://github.com/deppbrazil.png",
       name: "Mir Carvalho",
-      role: "FrontEnd Engineer"
+      role: "FrontEnd Engineer",
     },
     content: [
       {
         type: "paragraph",
-        content: "Fala galeraa 👋"
+        content: "Fala galeraa 👋",
       },
       {
         type: "paragraph",
-        content: "Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀"
+        content:
+          "Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀",
       },
       {
         type: "link",
-        content: "jane.design/doctorcare"
+        content: "jane.design/doctorcare",
       },
     ],
-    publishedAt: new Date("2022-07-27 19:59:00")
+    publishedAt: new Date("2022-07-27 19:59:00"),
   },
 
   {
@@ -40,34 +41,35 @@ const posts: Posts[] = [
     author: {
       avatarUrl: "https://github.com/diego3g.png",
       name: "Diego Fernandes",
-      role: "CTO Rocketseat"
+      role: "CTO Rocketseat",
     },
     content: [
       {
         type: "paragraph",
-        content: "Fala galeraa 👋"
+        content: "Fala galeraa 👋",
       },
       {
         type: "paragraph",
-        content: "Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀"
+        content:
+          "Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀",
       },
       {
         type: "link",
-        content: "jane.design/doctorcare"
+        content: "jane.design/doctorcare",
       },
     ],
-    publishedAt: new Date("2022-07-26 12:00:00")
+    publishedAt: new Date("2022-07-26 12:00:00"),
   },
-]
+];
 
 export function App() {
   return (
-    <div >
+    <div>
       <Header />
       <div className={styles.wrapper}>
         <Sidebar />
         <main>
-          {posts.map(post => {
+          {posts.map((post) => {
             return (
               <Post
                 key={post.id}
@@ -75,10 +77,10 @@ export function App() {
                 content={post.content}
                 publishedAt={post.publishedAt}
               />
-            )
+            );
           })}
         </main>
       </div>
     </div>
-  )
+  );
 }

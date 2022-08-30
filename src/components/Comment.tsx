@@ -8,8 +8,7 @@ interface CommentProps {
   onDeleteComment: (comment: string) => void;
 }
 
-const imgAvatar =
-  "https://github.com/deppbrazil.png"
+const imgAvatar = "https://github.com/deppbrazil.png";
 
 export function Comment({ content, onDeleteComment }: CommentProps) {
   const [likeCount, setLikeCount] = useState(0);
@@ -19,8 +18,8 @@ export function Comment({ content, onDeleteComment }: CommentProps) {
   }
 
   function handleLikeComment() {
-    setLikeCount(state => {
-      return state + 1
+    setLikeCount((state) => {
+      return state + 1;
     });
   }
 
@@ -43,9 +42,7 @@ export function Comment({ content, onDeleteComment }: CommentProps) {
             </button>
           </header>
 
-          <p>
-            {content}
-          </p>
+          <p>{content}</p>
         </div>
 
         <footer>
@@ -56,5 +53,5 @@ export function Comment({ content, onDeleteComment }: CommentProps) {
         </footer>
       </div>
     </div>
-  )
+  );
 }
